@@ -1,3 +1,9 @@
+![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)
+![FastAPI](https://img.shields.io/badge/FastAPI-Framework-green.svg)
+![License](https://img.shields.io/badge/license-MIT-yellow.svg)
+![GitHub stars](https://img.shields.io/github/stars/syed-amjad65/SkyLedger-AI?style=social)
+![GitHub forks](https://img.shields.io/github/forks/syed-amjad65/SkyLedger-AI?style=social)
+
 # SkyLedger‑AI
 
 ## Overview
