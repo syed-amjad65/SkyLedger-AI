@@ -37,6 +37,27 @@ Once the server is running with:
 ```bash
 uvicorn app.main:app --reload
 
+## 📁 Project Structure
+
+SkyLedger-AI/
+├─ app/
+│  ├─ __init__.py
+│  └─ main.py          # FastAPI app with /health and /hello endpoints
+├─ .venv/              # Local virtual environment (optional, not committed)
+├─ README.md           # Usage examples and docs
+├─ requirements.txt    # Python dependencies
+├─ .gitignore          # Excludes .venv, __pycache__, etc.
+└─ LICENSE.txt         # License information
+
+### Notes
+- Keep paths ASCII-safe (no spaces, no Unicode) for clean imports and tooling.
+- Run locally with:
+```bash
+uvicorn app.main:app --reload
+- Explore docs at:
+- Swagger UI: http://127.0.0.1:8000/docs
+- ReDoc: http://127.0.0.1:8000/redoc
+
 ## License
 - **Type:** MIT License
 - **Usage:** You may use, modify, and distribute this project with attribution
