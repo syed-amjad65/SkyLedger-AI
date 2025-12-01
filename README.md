@@ -30,6 +30,13 @@ SkyLedger‑AI is a dual‑domain analytics and optimization framework designed 
   - **Start:** `uvicorn app.main:app --reload`
   - **Open:** `http://127.0.0.1:8000/health`
 
+## 🧭 Getting started
+
+### Create and activate a virtual environment (Windows)
+```bash
+python -m venv .venv
+.\.venv\Scripts\activate
+
 ## 🚀 Usage Examples
 
 Once the server is running with:
