@@ -50,6 +50,28 @@ Once the server is running with:
 ```bash
 uvicorn app.main:app --reload
 
+### Forecast
+```bash
+curl http://127.0.0.1:8000/forecast
+{
+  "route": "DXB-LHR",
+  "forecasted_demand": [120, 135, 150, 160],
+  "method": "EMSR-b"
+}
+curl http://127.0.0.1:8000/inventory
+{
+  "route": "DXB-LHR",
+  "total_seats": 180,
+  "allocated": {"economy": 120, "business": 50, "first": 10},
+  "overbooking_strategy": "5% buffer"
+}
+curl http://127.0.0.1:8000/anomaly
+{
+  "campaign": "WinterSale2025",
+  "events_checked": 1000,
+  "anomalies_detected": 3,
+  "flags": ["missing_conversion", "duplicate_event", "timestamp_gap"]
+}
 ## 📁 Project Structure
 
 SkyLedger-AI/
