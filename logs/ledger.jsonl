@@ -1,0 +1,3 @@
+{"timestamp": "2025-12-03T08:28:50.767322Z", "endpoint": "/forecast", "request": {"route": "DXB-LHR", "horizon_days": 7}, "response": {"n_points": 4, "method": "EMSR-b"}}
+{"timestamp": "2025-12-03T08:29:20.195352Z", "endpoint": "/inventory", "request": {"route": "DXB-LHR", "total_seats": 180, "overbooking_pct": 0.05}, "response": {"allocated_sum": 180}}
+{"timestamp": "2025-12-03T08:29:34.940316Z", "endpoint": "/anomaly", "request": {"campaign": "WinterSale2025", "events_checked": 1000}, "response": {"anomalies_detected": 3, "flags_count": 3}}
