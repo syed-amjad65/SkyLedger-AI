@@ -3,9 +3,8 @@
 ![License](https://img.shields.io/badge/license-MIT-yellow.svg)
 ![GitHub stars](https://img.shields.io/github/stars/syed-amjad65/SkyLedger-AI?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/syed-amjad65/SkyLedger-AI?style=social)
-
-# SkyLedger‑AI    <p align="center">
-  <img src="assett/log.png" alt="SkyLedger AI Logo" width="200"/>
+<p align="center">
+  <img src="assets/logo.png" alt="SkyLedger AI Logo" width="200"/>
 </p>
 
 # SkyLedger AI
