@@ -1,3 +1,7 @@
+from app.services.forecast import baseline_forecast
+from app.services.inventory import allocate_seats
+from app.services.analytics import validate_events
+
 from fastapi import FastAPI, Query
 from typing import Dict
 from datetime import datetime
@@ -39,7 +43,7 @@ class AnomalyResponse(BaseModel):
     flags: List[str]
 @app.post("/forecast", response_model=ForecastResponse)
 def forecast(req: ForecastRequest):
-    demand = [120, 135, 150, 160][:min(4, req.horizon_days)]
+    demand = baseline_forecast(req.route, req.horizon_days)
     return ForecastResponse(
         route=req.route,
         forecasted_demand=demand,
@@ -50,7 +54,7 @@ def forecast(req: ForecastRequest):
 
 @app.post("/inventory", response_model=InventoryResponse)
 def inventory(req: InventoryRequest):
-    allocated = {"economy": 120, "business": 50, "first": 10}
+    allocated = allocate_seats(req.total_seats)
     return InventoryResponse(
         route=req.route,
         total_seats=req.total_seats,
@@ -62,12 +66,12 @@ def inventory(req: InventoryRequest):
 
 @app.post("/anomaly", response_model=AnomalyResponse)
 def anomaly(req: AnomalyRequest):
-    flags = ["missing_conversion", "duplicate_event", "timestamp_gap"]
+    result = validate_events(req.campaign, req.events_checked)
     return AnomalyResponse(
-        campaign=req.campaign,
-        events_checked=req.events_checked,
-        anomalies_detected=len(flags),
-        flags=flags,
+        campaign=result["campaign"],
+        events_checked=result["events_checked"],
+        anomalies_detected=result["anomalies_detected"],
+        flags=result["flags"],
         generated_at=datetime.utcnow()
     )
 
