@@ -1,1 +1,12 @@
+actual_show_up,actual_no_show,denied_boarding,correction_notes
+292,10,0,No show higher than forecast
+182,6,0,As forecast
+166,4,0,Slight underrun
+187,7,1,Oversell risk mitigated by decrement
+240,8,0,Peak day consistent
+180,6,0,Steady performance
+284,12,0,Strong show-up
+236,10,0,Influence applied correctly
+168,6,0,Stable
+283,11,0,Strong LF near capacity
 actual_show_up,actual_no_show,denied_boarding,correction_notes 

@@ -1,1 +1,12 @@
+seats,bookings,no_show_rate,safety_buffer,overbooking_level,decrement_rate,risk_flag
+296,290,0.06,6,24,3,OK
+190,185,0.05,5,15,2,OK
+174,168,0.05,5,13,2,OK
+190,180,0.06,6,22,3,Overheating
+248,240,0.06,6,19,2,OK
+190,180,0.05,5,15,2,OK
+296,284,0.06,6,26,3,OK
+248,236,0.06,6,20,2,OK
+174,167,0.05,5,14,2,OK
+296,283,0.06,6,25,3,OK
 seats,bookings,no_show_rate,safety_buffer,overbooking_level,decrement_rate,risk_flag 

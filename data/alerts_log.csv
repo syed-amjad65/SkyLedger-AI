@@ -1,1 +1,12 @@
+alert_type,root_cause,action_taken,owner,next_review
+Overheating,Intakes surge,Higher decrement set,InventoryMgr,2025-01-08
+Competitor,Underpricing,J closure applied,PricingMgr,2025-01-06
+Stalling,Low intakes,POS rule relaxed,DemandMgr,2025-01-06
+Holiday,Peak demand,Holdback seats reduced,InventoryMgr,2025-01-10
+Event,Special fair,F/J controlled,PricingMgr,2025-01-12
+DataQuality,Timestamp gaps,Validate and fix,DigitalMgr,2025-01-07
+Capacity,LF near 100,Up-gauge proposal,NetworkPlanner,2025-01-09
+Pricing,Yield dip,Raise floor fares,PricingMgr,2025-01-11
+Groups,Over target,Reduce group acceptance,GroupsRM,2025-01-08
+Stalling,Flat intakes,Open low Y buckets,InventoryMgr,2025-01-05
 alert_type,root_cause,action_taken,owner,next_review 

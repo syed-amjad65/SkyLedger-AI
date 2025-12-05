@@ -1,1 +1,12 @@
+class_code,action_type,reason,dpd_band,min_yield,expiry_dpd,owner
+J,Closure,Protect premium amid undercut,D-7+,0.32,3,InventoryMgr
+Y,Rule,Accept POS-KSA OD-LHR,D-14 to D-3,0.20,,DemandMgr
+Y,Closure,Holdback seats for groups,D-21 to D-7,0.18,7,GroupsRM
+J,Rule,Open J for POS-EU OD-RUH,D-10 to D-1,0.30,,PricingMgr
+Y,Rule,Relax POS GCC for off-peak,D-14+,0.19,,DemandMgr
+W,Closure,Close discounted buckets peak,D-5 to D-1,0.25,2,InventoryMgr
+F,Rule,Open F only at high yield,D-10+,0.40,,PricingMgr
+Y,Closure,Protect LF risk for event,D-7 to D-3,0.22,3,InventoryMgr
+J,Rule,Corporate POS acceptance,D-21+,0.31,,SalesMgr
+Y,Rule,Backfill stalling flights,D-14 to D-7,0.18,,DemandMgr
 class_code,action_type,reason,dpd_band,min_yield,expiry_dpd,owner 

@@ -1,1 +1,12 @@
+route,season,target_ratio,holdback_seats,accepted_groups,review_date
+RUH-LHR,Winter,0.12,12,3,2025-01-07
+RUH-JED,Winter,0.08,8,2,2025-01-12
+RUH-DXB,Winter,0.10,10,2,2025-01-08
+RUH-CDG,Winter,0.11,11,3,2025-01-11
+RUH-MXP,Winter,0.09,9,2,2025-01-10
+RUH-KUL,Winter,0.10,10,2,2025-01-09
+RUH-IST,Winter,0.08,8,1,2025-01-07
+RUH-CAI,Winter,0.07,7,2,2025-01-09
+RUH-DOH,Winter,0.06,6,1,2025-01-12
+RUH-LHR,Summer,0.10,10,2,2025-02-01
 route,season,target_ratio,holdback_seats,accepted_groups,review_date 

@@ -1,1 +1,12 @@
+event_type,route,start_date,end_date,influence_weight,notes
+Holiday,RUH-LHR,2025-01-01,2025-01-07,0.12,New Year peak EU
+Special,RUH-JED,2025-01-10,2025-01-12,0.10,Festival city events
+Competitor,RUH-DXB,2025-01-06,2025-01-08,-0.08,Competitor fare drop
+Holiday,RUH-CDG,2025-01-11,2025-01-13,0.11,Winter travel bump
+Special,RUH-MXP,2025-01-10,2025-01-11,0.07,Fashion trade show
+Competitor,RUH-LHR,2025-01-05,2025-01-06,-0.05,Promo in market
+Holiday,RUH-KUL,2025-01-08,2025-01-10,0.06,Regional holiday
+Special,RUH-IST,2025-01-07,2025-01-07,0.04,Sports event
+Competitor,RUH-CAI,2025-01-09,2025-01-10,-0.03,Capacity dump
+Holiday,RUH-CDG,2025-01-12,2025-01-13,0.05,Weekend bump
 event_type,route,start_date,end_date,influence_weight,notes 
