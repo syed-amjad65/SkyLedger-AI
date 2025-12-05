@@ -32,6 +32,34 @@ Sample datasets are in `data/` and kept ≤100 rows for fast testing.
 2. Use `excel/OverbookingCalculator.xlsx` to compute initial settings → save results back into `data/overbooking_settings.csv`.  
 3. Explore dashboards in `powerbi/SkyLedger.pbix` for monitoring, capacity, inventory, and groups mix.  
 
+## 🧪 Excel templates quick test
+
+These templates let you prove inventory and capacity logic without heavy tooling. Open them directly and try the scenarios below.
+
+### OverbookingCalculator.xlsx
+- **Inputs:** seats, bookings, no_show_rate, safety_buffer
+- **Outputs:** overbooking_level, decrement_rate, risk_flag
+- **How to test:**
+  - Enter values in row 2:
+    - seats=296, bookings=290, no_show_rate=0.06, safety_buffer=6
+  - Confirm:
+    - overbooking_level auto-calculates (≈24)
+    - decrement_rate = 3
+    - risk_flag = Overheating
+- **Use cases:** a) Protect against oversell b) Tune decrement levels c) Flag overheating/stalling early
+
+### CapacityScenarios.xlsx
+- **Inputs:** route, aircraft_type (dropdown), frequency (dropdown)
+- **Outputs:** expected_LF_delta, expected_yield_delta
+- **How to test:**
+  - Pick aircraft_type=B789, frequency=7 for RUH-LHR
+  - Confirm:
+    - expected_LF_delta = +0.05
+    - expected_yield_delta = +0.01
+- **Use cases:** a) Up-/down-gauge trade-offs b) Frequency tuning c) Combined LF/yield impact
+
+> Tip: Templates are kept simple on purpose for recruiter evaluation. The logic mirrors the CSVs in `data/` and the visuals in `powerbi/SkyLedger.pbix`.
+
 
 ## Owner details and experience
 - **Owner:** Syed Muhammad Amjad
