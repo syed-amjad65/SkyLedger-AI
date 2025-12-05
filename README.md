@@ -35,6 +35,8 @@ Sample datasets are in `data/` and kept ≤100 rows for fast testing.
 ## 🧪 Excel templates quick test
 
 These templates let you prove inventory and capacity logic without heavy tooling. Open them directly and try the scenarios below.
+- Download: [excel/OverbookingCalculator.xlsx](excel/OverbookingCalculator.xlsx)
+- Download: [excel/CapacityScenarios.xlsx](excel/CapacityScenarios.xlsx)
 
 ### OverbookingCalculator.xlsx
 - **Inputs:** seats, bookings, no_show_rate, safety_buffer
