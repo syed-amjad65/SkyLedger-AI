@@ -12,6 +12,26 @@
 
 ## Overview
 SkyLedger‑AI is a dual‑domain analytics and optimization framework designed to power airline commercial performance and digital analytics precision. It blends forecasting, inventory optimization, event tracking validation, and ledger‑style transparency to drive data‑driven decisions across routes, seats, and customer journeys.
+## 📊 Data Dictionary
+
+- **Flights:** flight_no, date, route, aircraft_type, seats, managed_capacity  
+- **DemandSignals:** dpd, bookings, daily_intakes, cancellations, no_show_rate  
+- **Revenue:** forecast_revenue, yield, rask, lf_target, class_mix  
+- **Influences:** event_type, route, start_date, end_date, influence_weight, notes  
+- **OverbookingSettings:** seats, bookings, no_show_rate, safety_buffer, overbooking_level, decrement_rate, risk_flag  
+- **InventoryControl:** class_code, action_type, reason, dpd_band, min_yield, expiry_dpd, owner  
+- **GroupsPolicy:** route, season, target_ratio, holdback_seats, accepted_groups, review_date  
+- **PDDCorrections:** actual_show_up, actual_no_show, denied_boarding, correction_notes  
+- **AlertsLog:** alert_type, root_cause, action_taken, owner, next_review  
+
+## ⚡ Data Quick Start
+
+Sample datasets are in `data/` and kept ≤100 rows for fast testing.
+
+1. Open Power BI or Access → Import `data/*.csv`.  
+2. Use `excel/OverbookingCalculator.xlsx` to compute initial settings → save results back into `data/overbooking_settings.csv`.  
+3. Explore dashboards in `powerbi/SkyLedger.pbix` for monitoring, capacity, inventory, and groups mix.  
+
 
 ## Owner details and experience
 - **Owner:** Syed Muhammad Amjad
