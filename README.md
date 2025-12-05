@@ -3,8 +3,12 @@
 ![License](https://img.shields.io/badge/license-MIT-yellow.svg)
 ![GitHub stars](https://img.shields.io/github/stars/syed-amjad65/SkyLedger-AI?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/syed-amjad65/SkyLedger-AI?style=social)
+<p align="center">
+  <img src="assets/logo.png" alt="SkyLedger AI Logo" width="200"/>
+</p>
 
-# SkyLedger‑AI
+# SkyLedger AI
+
 
 ## Overview
 SkyLedger‑AI is a dual‑domain analytics and optimization framework designed to power airline commercial performance and digital analytics precision. It blends forecasting, inventory optimization, event tracking validation, and ledger‑style transparency to drive data‑driven decisions across routes, seats, and customer journeys.
