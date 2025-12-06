@@ -30,7 +30,26 @@ Sample datasets are in `data/` and kept ≤100 rows for fast testing.
 
 1. Open Power BI or Access → Import `data/*.csv`.  
 2. Use `excel/OverbookingCalculator.xlsx` to compute initial settings → save results back into `data/overbooking_settings.csv`.  
-3. Explore dashboards in `powerbi/SkyLedger.pbix` for monitoring, capacity, inventory, and groups mix.  
+3. Explore dashboards in `powerbi/SkyLedger.pbix` for monitoring, capacity, inventory, and groups mix. 
+
+## 🔄 CSV → Access database pipeline
+
+SkyLedger-AI includes a reusable pipeline to load airline datasets from CSV into a Microsoft Access `.accdb` database using `pyodbc`.
+
+- **Database file:** `access/SkyLedger.accdb` (tracked via Git LFS)
+- **Loader script:** `scripts/import_to_access.py`
+- **Source files:** `data/*.csv` (Flights, DemandSignals, Revenue, Influences, etc.)
+- **Schema:** Detailed in `docs/data_dictionary.md`
+
+### How to run the import
+
+1. Ensure the **Microsoft Access Database Engine 2016** driver is installed.
+2. Update the connection string in:
+
+   ```text
+   scripts/import_to_access.py
+
+
 
 ## 🧪 Excel templates quick test
 
@@ -93,9 +112,12 @@ These templates let you prove inventory and capacity logic without heavy tooling
 ## 🧭 Getting started
 
 ### Create and activate a virtual environment (Windows)
+
 ```bash
 python -m venv .venv
 .\.venv\Scripts\activate
+pip install -r requirements.txt
+
 
 ## 🚀 Usage Examples
 
@@ -126,17 +148,23 @@ curl http://127.0.0.1:8000/anomaly
   "anomalies_detected": 3,
   "flags": ["missing_conversion", "duplicate_event", "timestamp_gap"]
 }
-## 📁 Project Structure
+## 📁 Project structure
 
+```text
 SkyLedger-AI/
-├─ app/
-│  ├─ __init__.py
-│  └─ main.py          # FastAPI app with /health and /hello endpoints
-├─ .venv/              # Local virtual environment (optional, not committed)
-├─ README.md           # Usage examples and docs
+├─ app/                # FastAPI app and routers (health, forecast, inventory, anomaly)
+├─ access/             # Access .accdb database and related assets (LFS-tracked)
+├─ scripts/            # CSV→Access ODBC loader and helper scripts
+├─ data/               # Sample airline datasets (≤100 rows each for fast testing)
+├─ docs/               # Data dictionary and design notes
+├─ logs/               # Ledger-style audit logs and run history
+├─ assets/             # SkyLedger-AI logo and visual assets
+├─ tests/              # Basic tests for API and services
+├─ .github/workflows/  # CI workflows for daily runs and artifacts
+├─ README.md           # Main documentation
 ├─ requirements.txt    # Python dependencies
-├─ .gitignore          # Excludes .venv, __pycache__, etc.
-└─ LICENSE.txt         # License information
+└─ LICENSE.txt         # MIT license
+
 
 ### Notes
 - Keep paths ASCII-safe (no spaces, no Unicode) for clean imports and tooling.
