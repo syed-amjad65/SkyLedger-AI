@@ -6,25 +6,74 @@ from app.utils.logger import log_event
 from fastapi import FastAPI, Query
 from typing import Dict
 from datetime import datetime
+
 from app.schemas import (
     ForecastRequest, ForecastResponse,
     InventoryRequest, InventoryResponse,
     AnomalyRequest, AnomalyResponse
 )
 
-from fastapi import FastAPI
-from pydantic import BaseModel
-from typing import List, Dict
+app = FastAPI(
+    title="SkyLedger-AI API",
+    version="0.1.0",
+    description="Airline & Digital Analytics API"
+)
 
-app = FastAPI(title="SkyLedger-AI API", version="0.1.0",description="Airline & Digital Analytics API")
-
+# -------------------------
+# Health Check
+# -------------------------
 @app.get("/health", response_model=Dict[str, str])
 def health():
     return {"status": "ok"}
 
+
+# -------------------------
+# Hello Endpoint
+# -------------------------
 @app.get("/hello", response_model=Dict[str, str])
 def hello(name: str = Query("World", min_length=1, example="Syed")):
     return {"message": f"Hello {name}, SkyLedger-AI"}
+
+
+# -------------------------
+# Forecast Endpoint
+# -------------------------
+@app.post("/forecast", response_model=ForecastResponse)
+def forecast(request: ForecastRequest):
+    # Dummy logic for now
+    return ForecastResponse(
+        route=request.route,
+        forecasted_demand=[120, 135, 150, 160, 175],
+        method="simple_moving_average"
+    )
+
+
+# -------------------------
+# Inventory Endpoint
+# -------------------------
+@app.post("/inventory", response_model=InventoryResponse)
+def inventory(request: InventoryRequest):
+    # Dummy logic for now
+    return InventoryResponse(
+        route=request.route,
+        seats_available=42,
+        recommended_action="open_class",
+        reason="demand trending above forecast"
+    )
+
+
+# -------------------------
+# Anomaly Detection Endpoint
+# -------------------------
+@app.post("/anomaly", response_model=AnomalyResponse)
+def anomaly(request: AnomalyRequest):
+    # Dummy logic for now
+    return AnomalyResponse(
+        campaign=request.campaign,
+        anomalies_detected=3,
+        details=["missing event", "low conversion", "spike in drop-offs"],
+        timestamp=datetime.utcnow()
+    )
 
 class ForecastResponse(BaseModel):
     route: str
