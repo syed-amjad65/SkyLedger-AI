@@ -41,21 +41,31 @@ Sample datasets are in `data/` and kept ≤100 rows for fast testing.
 
 ## 🔄 CSV → Access database pipeline
 
-SkyLedger-AI includes a reusable pipeline to load airline datasets from CSV into a Microsoft Access `.accdb` database using `pyodbc`.
+SkyLedger‑AI includes a reusable pipeline to load airline datasets from CSV into a Microsoft Access `.accdb` database using `pyodbc`.
 
 - **Database file:** `access/SkyLedger.accdb` (tracked via Git LFS)  
 - **Loader script:** `scripts/import_to_access.py`  
-- **Source files:** `data/*.csv` (Flights, DemandSignals, Revenue, Influences, etc.)  
+- **Source files:** `data/*.csv`  
 - **Schema:** Detailed in `docs/data_dictionary.md`  
 
 ### How to run the import
 
-1. Ensure the **Microsoft Access Database Engine 2016** driver is installed.  
+1. Install the **Microsoft Access Database Engine 2016** driver.  
 2. Update the connection string in:
 
 ```text
 scripts/import_to_access.py
-Excel templates quick test
+Run the loader:
+
+bash
+python scripts/import_to_access.py
+Expected result:
+
+All CSVs load into Access tables
+
+Logs saved in logs/access_import.log
+
+🧪 Excel templates quick test
 These templates let you prove inventory and capacity logic without heavy tooling.
 
 Download: excel/OverbookingCalculator.xlsx
@@ -66,6 +76,7 @@ OverbookingCalculator.xlsx
 Inputs: seats, bookings, no_show_rate, safety_buffer Outputs: overbooking_level, decrement_rate, risk_flag
 
 How to test:
+
 Enter values in row 2:
 
 seats = 296
@@ -78,7 +89,7 @@ safety_buffer = 6
 
 Confirm:
 
-overbooking_level auto-calculates (≈24)
+overbooking_level ≈ 24
 
 decrement_rate = 3
 
@@ -97,7 +108,7 @@ aircraft_type = B789
 
 frequency = 7
 
-route = RUH-LHR
+route = RUH‑LHR
 
 Confirm:
 
@@ -108,7 +119,6 @@ expected_yield_delta = +0.01
 Use cases: a) Up-/down-gauge trade-offs b) Frequency tuning c) Combined LF/yield impact
 
 Templates are kept simple on purpose for recruiter evaluation. The logic mirrors the CSVs in data/ and the visuals in powerbi/SkyLedger.pbix.
-
 Owner details and experience
 Owner: Syed Muhammad Amjad
 
@@ -117,6 +127,7 @@ Role: Senior Data Scientist, Digital Analytics Insights Manager, and Inventory O
 Experience: 25+ years across aviation, healthcare, pharma, and supply chain
 
 Focus: Transforming legacy decision processes into AI‑driven, automated, and transparent systems; packaging recruiter‑ready projects with clear documentation and reproducible workflows
+
 What SkyLedger‑AI demonstrates
 Airline inventory optimization: EMSR‑b seat allocation, demand forecasting, overbooking strategy simulation
 
@@ -124,7 +135,7 @@ Revenue KPIs visibility: RASK, yield, load factor dashboards and spill/spoil tra
 
 Digital analytics validation: Event capture checks, funnel analysis, anomaly detection, campaign effectiveness
 
-APIs: FastAPI endpoints for /health, /forecast, /inventory, /anomaly (extensible)
+APIs: FastAPI endpoints for /health, /forecast, /inventory, /anomaly
 
 Automation: GitHub Actions for daily runs and consistent outputs
 
@@ -141,22 +152,31 @@ Response:
 json
 { "status": "ok" }
 Local run
+bash
 pip install -r requirements.txt
 uvicorn app.main:app --reload
 Open: http://127.0.0.1:8000/health
-Getting started
+
+🧭 Getting started
 Create and activate a virtual environment (Windows)
+bash
 python -m venv .venv
 .\.venv\Scripts\activate
 pip install -r requirements.txt
+
 🚀 Usage Examples
 Once the server is running:
+
+bash
 uvicorn app.main:app --reload
 Forecast
+bash
 curl http://127.0.0.1:8000/forecast
 Inventory
+bash
 curl http://127.0.0.1:8000/inventory
 Anomaly Detection
+bash
 curl http://127.0.0.1:8000/anomaly
 
 📁 Project structure
@@ -179,7 +199,7 @@ Keep paths ASCII-safe (no spaces, no Unicode).
 
 Run locally with:
 
-
+bash
 uvicorn app.main:app --reload
 Explore docs:
 
