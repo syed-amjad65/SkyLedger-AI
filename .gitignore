@@ -1,3 +1,7 @@
 .venv/
 __pycache__/
 *.pycapp/main.backup.py 
+# Access artifacts
+*.ldb
+*.laccdb
+~$*
