@@ -64,7 +64,6 @@ Expected result:
 All CSVs load into Access tables
 
 Logs saved in logs/access_import.log
-
 🧪 Excel templates quick test
 These templates let you prove inventory and capacity logic without heavy tooling.
 
@@ -119,6 +118,7 @@ expected_yield_delta = +0.01
 Use cases: a) Up-/down-gauge trade-offs b) Frequency tuning c) Combined LF/yield impact
 
 Templates are kept simple on purpose for recruiter evaluation. The logic mirrors the CSVs in data/ and the visuals in powerbi/SkyLedger.pbix.
+
 Owner details and experience
 Owner: Syed Muhammad Amjad
 
@@ -163,7 +163,6 @@ bash
 python -m venv .venv
 .\.venv\Scripts\activate
 pip install -r requirements.txt
-
 🚀 Usage Examples
 Once the server is running:
 
@@ -178,7 +177,6 @@ curl http://127.0.0.1:8000/inventory
 Anomaly Detection
 bash
 curl http://127.0.0.1:8000/anomaly
-
 📁 Project structure
 text
 SkyLedger-AI/
