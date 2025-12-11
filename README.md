@@ -49,9 +49,9 @@ It blends:
 
 ---
 
-# 💡 Key Demonstrations (Why Recruiters Should Care)
+# 💡 Key Demonstrations 
 
-This project showcases your ability to transform legacy processes into **AI‑driven, automated, transparent systems**.
+This project showcases my ability to transform legacy processes into **AI‑driven, automated, transparent systems**.
 
 ### ✅ Airline Inventory Optimization  
 - EMSR‑b seat allocation  
@@ -199,7 +199,7 @@ Endpoints:
 Syed Muhammad Amjad Senior Data Scientist & Digital Analytics Leader 25+ years across aviation, healthcare, pharma, logistics, and supply chain.
 
 Detail	Information
-Email	syedemirates2021@gmail.com
+Email	skyledgerai@gmail.com
 WhatsApp	+92 335 2177766
 LinkedIn	https://www.linkedin.com/in/syed-amjad-9b513570
 GitHub	https://github.com/syed-amjad65
