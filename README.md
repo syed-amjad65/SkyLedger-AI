@@ -5,7 +5,7 @@
 ![GitHub forks](https://img.shields.io/github/forks/syed-amjad65/SkyLedger-AI?style=social)
 
 <p align="center">
-  <img src="assets/logo.png" alt="SkyLedger AI Logo" width="200"/>
+  <img src="assets/SkyLedger banner logo" alt="SkyLedger AI Logo" width="200"/>
 </p>
 
 # SkyLedger‑AI  
