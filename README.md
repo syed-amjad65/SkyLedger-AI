@@ -1,174 +1,207 @@
-![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)
-![FastAPI](https://img.shields.io/badge/FastAPI-Framework-green.svg)
-![License](https://img.shields.io/badge/license-MIT-yellow.svg)
-![GitHub stars](https://img.shields.io/github/stars/syed-amjad65/SkyLedger-AI?style=social)
-![GitHub forks](https://img.shields.io/github/forks/syed-amjad65/SkyLedger-AI?style=social)
-
 <p align="center">
   <img src="assets/skyledgerAI_banner_logo.jpg" alt="SkyLedger AI Banner" width="100%">
 </p>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10+-blue" alt="Python Badge"/>
+  <img src="https://img.shields.io/badge/FastAPI-Framework-009688" alt="FastAPI Badge"/>
+  <img src="https://img.shields.io/badge/License-MIT-green" alt="MIT License"/>
+  <img src="https://img.shields.io/github/stars/syed-amjad65/SkyLedger-AI?style=social" alt="GitHub Stars"/>
+  <img src="https://img.shields.io/github/forks/syed-amjad65/SkyLedger-AI?style=social" alt="GitHub Forks"/>
+</p>
 
-# SkyLedger‑AI  
-**Aviation Operations & Revenue Optimization Framework**
-
----
-
-## Overview
-SkyLedger-AI is a dual-domain analytics and optimization framework designed to power airline commercial performance and digital analytics precision. It blends forecasting, inventory optimization, event tracking validation, and ledger-style transparency to drive data-driven decisions across routes, seats, and customer journeys.
-
-The framework provides an end-to-end solution for managing complex Revenue Management (RM) decisions and auditing data quality, directly aligning with key Aviation Operations Optimization (AOO) goals.
-
----
-
-## 💡 Key Demonstrations (Why Recruiters Should Care)
-
-This project showcases expertise in moving legacy decision processes into AI-driven, automated, and transparent systems.
-
-- **Airline Inventory Optimization:** EMSR-b seat allocation, demand forecasting, overbooking strategy simulation  
-- **Revenue KPIs Visibility:** RASK, yield, load factor, spill/spoil trade-off  
-- **Digital Analytics Validation:** Event capture checks, funnel analysis, anomaly detection  
-- **APIs & Scalability:** FastAPI endpoints (`/forecast`, `/inventory`, `/anomaly`)  
-- **Automation & Auditing:** GitHub Actions + ledger-style logs for transparency  
+<h1 align="center">SkyLedger‑AI</h1>
+<h3 align="center">Intelligence That Powers Every Operation</h3>
 
 ---
 
-## 📁 Project Structure
+# 🌍 Multi‑Industry Positioning
+
+SkyLedger‑AI is a **multi‑industry operations intelligence framework** designed to support:
+
+- **Aviation** – cargo, revenue, engineering, inventory, OTP  
+- **Logistics** – hub performance, SLA compliance, route optimization  
+- **Healthcare** – patient flow, bed capacity, consumables  
+- **Pharma** – cold‑chain, batch tracking, compliance  
+- **Oil & Gas** – maintenance reliability, safety analytics  
+- **Retail & E‑commerce** – funnel analytics, pricing, stock health  
+- **Manufacturing** – predictive maintenance, vendor performance  
+
+It blends **forecasting, optimization, anomaly detection, digital analytics validation, and ledger‑style auditability** into one unified platform.
+
+---
+
+# ✈️ Aviation‑Focused Overview (Your Original Domain)
+
+SkyLedger‑AI is a dual‑domain analytics and optimization framework designed to power:
+
+✅ Airline Commercial Performance  
+✅ Digital Analytics Precision  
+
+It blends:
+
+- Forecasting  
+- Inventory optimization  
+- Event tracking validation  
+- Ledger‑style transparency  
+
+…to drive data‑driven decisions across **routes, seats, and customer journeys**.
+
+---
+
+# 💡 Key Demonstrations (Why Recruiters Should Care)
+
+This project showcases your ability to transform legacy processes into **AI‑driven, automated, transparent systems**.
+
+### ✅ Airline Inventory Optimization  
+- EMSR‑b seat allocation  
+- Demand forecasting  
+- Overbooking strategy simulation  
+
+### ✅ Revenue KPIs Visibility  
+- RASK  
+- Yield  
+- Load factor  
+- Spill/spoil trade‑off  
+
+### ✅ Digital Analytics Validation  
+- Event capture checks  
+- Funnel analysis  
+- Anomaly detection  
+
+### ✅ APIs & Scalability  
+FastAPI endpoints:  
+`/forecast`, `/inventory`, `/anomaly`
+
+### ✅ Automation & Auditing  
+- GitHub Actions  
+- Ledger‑style logs  
+
+---
+
+# 🧩 Core Modules (Aviation + Multi‑Industry)
+
+### 1. Cargo Intelligence & Pricing  
+### 2. Revenue & Network Performance  
+### 3. Engineering & MRO Supply Chain  
+### 4. Inventory & Materials Optimization  
+### 5. Operational Performance & OTP  
+### 6. Digital Analytics Validation & Anomaly Engine  
+### 7. Ledger‑Style Audit & Compliance Layer  
+
+---
+
+# 🏗️ Architecture Diagram (Text)
 
 ```text
+                          ┌──────────────────────────────────────────┐
+                          │              Data Sources                 │
+                          │ Aviation | Logistics | Healthcare | ...   │
+                          └──────────────────────────────────────────┘
+                                            │
+                                            ▼
+                          ┌──────────────────────────────────────────┐
+                          │           Data Processing Layer           │
+                          │ ETL | Cleaning | Feature Engineering      │
+                          │ Time-series & Event Stream Processing     │
+                          └──────────────────────────────────────────┘
+                                            │
+                                            ▼
+                          ┌──────────────────────────────────────────┐
+                          │           Intelligence Engines            │
+                          │ Forecasting | Optimization | Anomalies    │
+                          │ Reliability | Funnel & Journey Analytics  │
+                          └──────────────────────────────────────────┘
+                                            │
+                                            ▼
+                          ┌──────────────────────────────────────────┐
+                          │           API & Automation Layer          │
+                          │ FastAPI | Schedulers | Pre-alerts         │
+                          │ Ledger-style Audit Logging                │
+                          └──────────────────────────────────────────┘
+                                            │
+                                            ▼
+                          ┌──────────────────────────────────────────┐
+                          │           Dashboards & Apps              │
+                          │ Power BI / Tableau | Ops Cockpits        │
+                          │ Digital Analytics Validation UI          │
+                          └──────────────────────────────────────────┘
+
+📁 Project Structure
 SkyLedger-AI/
-├─ app/                # FastAPI app and routers (health, forecast, inventory, anomaly)
-├─ access/             # Access .accdb database and related assets (LFS-tracked)
-├─ scripts/            # CSV→Access ODBC loader and helper scripts
-├─ data/               # Sample airline datasets (≤100 rows each for fast testing)
-├─ docs/               # Data dictionary and design notes
-├─ logs/               # Ledger-style audit logs and run history
-├─ assets/             # SkyLedger-AI logo and visual assets
-├─ tests/              # Basic tests for API and services
-├─ .github/workflows/  # CI workflows for daily runs and artifacts
-├─ README.md           # Main documentation
-├─ requirements.txt    # Python dependencies
-└─ LICENSE.txt         # MIT license
-ata Dictionary (Key Tables)
+├─ app/                # FastAPI app and routers
+├─ access/             # Access .accdb database (LFS-tracked)
+├─ scripts/            # CSV→Access ODBC loader
+├─ data/               # Sample datasets
+├─ docs/               # Data dictionary & design notes
+├─ logs/               # Ledger-style audit logs
+├─ assets/             # Logos & visual assets
+├─ tests/              # API tests
+├─ .github/workflows/  # CI pipelines
+├─ README.md
+├─ requirements.txt
+└─ LICENSE.txt
+
+📚 Data Dictionary 
 Domain	Entity	Key Fields	Purpose
-Operations	Flights	flight_no, route, aircraft_type, seats, managed_capacity	Master data for flight parameters and capacity
-Forecasting	DemandSignals	dpd, bookings, daily_intakes, cancellations, no_show_rate	Tracks real-time demand metrics by DPD
-Commercial	Revenue	forecast_revenue, yield, rask, lf_target, class_mix	Core financial and performance metrics
-Inventory	InventoryControl	class_code, action_type, dpd_band, min_yield, owner	Logs granular controls applied to seat availability
-Risk	OverbookingSettings	no_show_rate, safety_buffer, overbooking_level, risk_flag	Dynamic overbooking strategy
-Audit	AlertsLog	alert_type, root_cause, action_taken, owner, next_review	Ledger-style transparency
-Sample datasets are available in data/ and kept ≤100 rows for fast testing.
+Operations	Flights	flight_no, route, aircraft_type, seats, managed_capacity	Flight master data
+Forecasting	DemandSignals	dpd, bookings, intakes, cancellations, no_show_rate	Real‑time demand tracking
+Commercial	Revenue	forecast_revenue, yield, rask, lf_target, class_mix	Financial KPIs
+Inventory	InventoryControl	class_code, action_type, dpd_band, min_yield, owner	Seat control actions
+Risk	OverbookingSettings	no_show_rate, safety_buffer, overbooking_level, risk_flag	Overbooking strategy
+Audit	AlertsLog	alert_type, root_cause, action_taken, owner, next_review	Ledger‑style transparency
 
 ⚡ Data Quick Start
-1. Local Setup
+✅ 1. Local Setup
 bash
 python -m venv .venv
-
-# Windows
 .\.venv\Scripts\activate
-
-# Linux/macOS
-source .venv/bin/activate
-
-# Install dependencies
 pip install -r requirements.txt
-2. CSV → Access Database Pipeline (ODBC Integration)
-SkyLedger-AI includes a reusable pipeline to load sample datasets from CSV into a Microsoft Access .accdb database using pyodbc.
 
-Database file: access/SkyLedger.accdb
+🗄️ CSV → Access Database Pipeline (ODBC)
+Database: access/SkyLedger.accdb
 
-Loader script: scripts/import_to_access.py
+Loader: scripts/import_to_access.py
 
-How to run the import
-Install the Microsoft Access Database Engine 2016 driver
-
-Update the connection string in scripts/import_to_access.py
-
-Run the loader:
+Run:
 
 bash
 python scripts/import_to_access.py
-Expected result:
+Expected:
 
-All CSVs load into Access tables
+✅ All CSVs loaded ✅ Logs saved in logs/access_import.log
 
-Logs saved in logs/access_import.log
+🧪 Excel Templates (Logic Verification)
+✅ OverbookingCalculator.xlsx
+Inputs → seats, bookings, no_show_rate, safety_buffer Outputs → overbooking_level, decrement_rate, risk_flag
 
-🧪 Excel Templates Quick Test (Logic Verification)
-These templates let you prove inventory and capacity logic without heavy tooling.
-
-1. OverbookingCalculator.xlsx
-Focus: Risk Management & Dynamic Decrement Strategy
-
-Inputs	Outputs
-seats, bookings, no_show_rate, safety_buffer	overbooking_level, decrement_rate, risk_flag
-Example Test:
-
-seats = 296
-
-bookings = 290
-
-no_show_rate = 0.06
-
-safety_buffer = 6
-
-Confirm:
-
-overbooking_level ≈ 24
-
-decrement_rate = 3
-
-risk_flag = Overheating
-
-2. CapacityScenarios.xlsx
-Focus: Fleet Planning & Commercial Trade-offs
-
-Inputs	Outputs
-route, aircraft_type (dropdown), frequency (dropdown)	expected_LF_delta, expected_yield_delta
-Example Test (Simulated):
-
-aircraft_type = B789
-
-frequency = 7
-
-route = RUH-LHR
-
-Confirm:
-
-expected_LF_delta = +0.05
-
-expected_yield_delta = +0.01
+✅ CapacityScenarios.xlsx
+Inputs → route, aircraft_type, frequency Outputs → expected_LF_delta, expected_yield_delta
 
 🌐 Tiny API Quickstart (FastAPI)
-Run the local server:
+Run:
 
 bash
 uvicorn app.main:app --reload
-Open Swagger UI: http://127.0.0.1:8000/docs
+Swagger UI: http://127.0.0.1:8000/docs
 
-Health Check Endpoint
-Attribute	Detail
-Method	GET
-Path	/health
-Response	{"status": "ok"}
-Usage Examples
-bash
-# Forecast Endpoint
-curl http://127.0.0.1:8000/forecast
+Endpoints:
 
-# Inventory Control Endpoint
-curl http://127.0.0.1:8000/inventory
+/health
 
-# Anomaly Detection Endpoint
-curl http://127.0.0.1:8000/anomaly
-Contact & Owner Details
-This project was developed by Syed Muhammad Amjad, Senior Data Scientist, Digital Analytics Insights Manager, and Inventory Optimization Leader with 25+ years of experience across aviation, healthcare, pharma, and supply chain.
+/forecast
 
-Detail	Contact Information
-Name	Syed Muhammad Amjad
+/inventory
+
+/anomaly
+
+👤 Contact & Owner Details
+Syed Muhammad Amjad Senior Data Scientist & Digital Analytics Leader 25+ years across aviation, healthcare, pharma, logistics, and supply chain.
+
+Detail	Information
 Email	syedemirates2021@gmail.com
 WhatsApp	+92 335 2177766
 LinkedIn	https://www.linkedin.com/in/syed-amjad-9b513570
 GitHub	https://github.com/syed-amjad65
-License
-This project is released under the MIT License. You may use, modify, and distribute this project with attribution. See the LICENSE.txt file for full details.
+📜 License
+MIT License — free to use, modify, and distribute with attribution.
