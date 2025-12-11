@@ -5,8 +5,9 @@
 ![GitHub forks](https://img.shields.io/github/forks/syed-amjad65/SkyLedger-AI?style=social)
 
 <p align="center">
-  <img src="assets/skyledger_banner_logo.png" alt="SkyLedger AI Banner" width="100%">
+  <img src="assets/skyledgerAI_banner_logo.jpg" alt="SkyLedger AI Banner" width="100%">
 </p>
+
 
 # SkyLedger‑AI  
 **Aviation Operations & Revenue Optimization Framework**
