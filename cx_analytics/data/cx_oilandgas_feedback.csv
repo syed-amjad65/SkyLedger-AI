@@ -1,0 +1,7 @@
+customer_id,industry,channel,touchpoint,nps_score,comment,created_at
+O001,Oil&Gas,Web,Billing,3,"Billing statement was unclear",2025-10-01
+O002,Oil&Gas,CallCenter,Support,9,"Support was responsive and knowledgeable",2025-10-02
+O003,Oil&Gas,App,OutageInfo,2,"Outage information was delayed",2025-10-03
+O004,Oil&Gas,Web,AccountManagement,8,"Easy to update my account details",2025-10-04
+O005,Oil&Gas,App,Notifications,4,"Got too many non-relevant notifications",2025-10-05
+O006,Oil&Gas,Field,ServiceVisit,10,"Field team resolved the issue on first visit",2025-10-06

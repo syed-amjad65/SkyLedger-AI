@@ -1,0 +1,9 @@
+customer_id,industry,channel,touchpoint,nps_score,comment,created_at
+A001,Airline,App,Check-in,2,"App crashed during check-in",2025-10-01
+A002,Airline,Web,Booking,9,"Booking process was smooth",2025-10-02
+A003,Airline,Airport,Boarding,3,"Long boarding queues",2025-10-03
+A004,Airline,InFlight,Service,10,"Crew was extremely helpful",2025-10-04
+A005,Airline,CallCenter,Support,4,"Agent could not resolve my issue",2025-10-05
+A006,Airline,App,Payment,8,"Payment was slow but worked",2025-10-06
+A007,Airline,Web,ManageBooking,7,"Easy to change my seat",2025-10-07
+A008,Airline,Airport,Baggage,1,"Lost baggage and no updates",2025-10-08

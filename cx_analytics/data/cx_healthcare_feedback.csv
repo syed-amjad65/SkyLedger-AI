@@ -1,0 +1,7 @@
+customer_id,industry,channel,touchpoint,nps_score,comment,created_at
+H001,Healthcare,CallCenter,Appointment,10,"Agent was very helpful",2025-10-01
+H002,Healthcare,App,Booking,3,"App kept freezing during appointment booking",2025-10-02
+H003,Healthcare,Hospital,WaitingRoom,2,"Wait time was too long",2025-10-03
+H004,Healthcare,Hospital,DoctorVisit,9,"Doctor was professional and kind",2025-10-04
+H005,Healthcare,Web,Reports,7,"Easy to download my reports",2025-10-05
+H006,Healthcare,App,Payments,4,"Payment failed twice before working",2025-10-06

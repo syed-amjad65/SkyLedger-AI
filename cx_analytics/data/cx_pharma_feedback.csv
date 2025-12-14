@@ -1,0 +1,7 @@
+customer_id,industry,channel,touchpoint,nps_score,comment,created_at
+P001,Pharma,Web,Information,8,"Drug information was easy to understand",2025-10-01
+P002,Pharma,CallCenter,Support,3,"Could not get clear dosage guidance",2025-10-02
+P003,Pharma,App,Refill,9,"Refill reminder was very helpful",2025-10-03
+P004,Pharma,Web,Ordering,2,"Order got delayed without explanation",2025-10-04
+P005,Pharma,App,SideEffects,4,"Side effect reporting form was confusing",2025-10-05
+P006,Pharma,CallCenter,AdverseEvent,10,"Agent handled adverse event professionally",2025-10-06

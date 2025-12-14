@@ -1,0 +1,7 @@
+customer_id,industry,channel,touchpoint,nps_score,comment,created_at
+E001,Ecommerce,App,Delivery,3,"Delivery was late and package damaged",2025-10-01
+E002,Ecommerce,Web,Checkout,9,"Checkout was fast and easy",2025-10-02
+E003,Ecommerce,App,Returns,2,"Return process was confusing",2025-10-03
+E004,Ecommerce,Web,ProductPage,8,"Product details were clear",2025-10-04
+E005,Ecommerce,App,Tracking,4,"Tracking updates were delayed",2025-10-05
+E006,Ecommerce,CallCenter,Support,10,"Support agent resolved my issue quickly",2025-10-06

@@ -1,0 +1,7 @@
+customer_id,industry,channel,touchpoint,nps_score,comment,created_at
+L001,Logistics,App,Tracking,3,"Tracking updates were not real-time",2025-10-01
+L002,Logistics,Web,Booking,8,"Booking shipment was straightforward",2025-10-02
+L003,Logistics,CallCenter,Support,2,"Support could not locate my shipment",2025-10-03
+L004,Logistics,App,Notifications,4,"Delayed notification for delivery attempt",2025-10-04
+L005,Logistics,Web,Claims,9,"Claims process was efficient",2025-10-05
+L006,Logistics,App,Delivery,1,"Shipment was delivered to the wrong address",2025-10-06

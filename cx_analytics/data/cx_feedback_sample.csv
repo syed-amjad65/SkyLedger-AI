@@ -1,0 +1,5 @@
+customer_id,industry,channel,touchpoint,nps_score,comment,created_at
+C001,Airline,App,Check-in,2,"App keeps crashing at payment",2025-10-01
+C002,Airline,Web,Booking,9,"Very smooth booking experience",2025-10-02
+C003,Ecommerce,App,Delivery,3,"Delivery was late and box damaged",2025-10-03
+C004,Healthcare,CallCenter,Appointment,10,"Agent was very helpful and kind",2025-10-03
