@@ -15,6 +15,25 @@
 
 ---
 
+# 📑 Table of Contents
+
+- [Multi‑Industry Positioning](#-multiindustry-positioning)
+- [Aviation‑Focused Overview](#️-aviationfocused-overview)
+- [Key Demonstrations](#-key-demonstrations)
+- [Core Modules](#-core-modules-aviation--multiindustry)
+- [Module–Industry Coverage Matrix](#-moduleindustry-coverage-matrix)
+- [Architecture Diagram](#️-architecture-diagram-text)
+- [Project Structure](#-project-structure)
+- [Data Dictionary](#-data-dictionary)
+- [Data Quick Start](#-data-quick-start)
+- [CSV → Access Database Pipeline](#️-csv--access-database-pipeline-odbc)
+- [Excel Templates](#-excel-templates-logic-verification)
+- [Tiny API Quickstart](#-tiny-api-quickstart-fastapi)
+- [Contact & Owner Details](#-contact--owner-details)
+- [License](#-license)
+
+---
+
 # 🌍 Multi‑Industry Positioning
 
 SkyLedger‑AI is a **multi‑industry operations intelligence framework** designed to support:
@@ -27,18 +46,18 @@ SkyLedger‑AI is a **multi‑industry operations intelligence framework** desig
 - **Retail & E‑commerce** – funnel analytics, pricing, stock health  
 - **Manufacturing** – predictive maintenance, vendor performance  
 
-It blends **forecasting, optimization, anomaly detection, digital analytics validation, and ledger‑style auditability** into one unified platform.
+It blends **forecasting, optimization, anomaly detection, digital analytics validation, CX analytics, predictive maintenance, and ledger‑style auditability** into one unified platform.
 
 ---
 
-# ✈️ Aviation‑Focused Overview (Your Original Domain)
+# ✈️ Aviation‑Focused Overview
 
-SkyLedger‑AI is a dual‑domain analytics and optimization framework designed to power:
+SkyLedger‑AI is also a **dual‑domain analytics and optimization framework** designed to power:
 
 ✅ Airline Commercial Performance  
 ✅ Digital Analytics Precision  
 
-It blends:
+It integrates:
 
 - Forecasting  
 - Inventory optimization  
@@ -49,45 +68,63 @@ It blends:
 
 ---
 
-# 💡 Key Demonstrations 
+# 💡 Key Demonstrations
 
-This project showcases my ability to transform legacy processes into **AI‑driven, automated, transparent systems**.
+This project showcases the ability to transform **real operational workflows** into **AI‑driven, automated, transparent systems**.
 
-### ✅ Airline Inventory Optimization  
+### ✅ Airline Inventory & Revenue Optimization  
 - EMSR‑b seat allocation  
 - Demand forecasting  
 - Overbooking strategy simulation  
+- RASK, yield, load factor, spill/spoil trade‑offs  
 
-### ✅ Revenue KPIs Visibility  
-- RASK  
-- Yield  
-- Load factor  
-- Spill/spoil trade‑off  
-
-### ✅ Digital Analytics Validation  
+### ✅ Digital Analytics & CX Validation  
 - Event capture checks  
-- Funnel analysis  
-- Anomaly detection  
+- Funnel and journey analysis  
+- CX feedback (NPS & VoC) analytics  
+- Anomaly detection on key KPIs  
 
 ### ✅ APIs & Scalability  
 FastAPI endpoints:  
-`/forecast`, `/inventory`, `/anomaly`
+
+- `/health`  
+- `/forecast`  
+- `/inventory`  
+- `/anomaly`  
 
 ### ✅ Automation & Auditing  
 - GitHub Actions  
-- Ledger‑style logs  
+- Ledger‑style logs for transparency  
 
 ---
 
 # 🧩 Core Modules (Aviation + Multi‑Industry)
 
-### 1. Cargo Intelligence & Pricing  
-### 2. Revenue & Network Performance  
-### 3. Engineering & MRO Supply Chain  
-### 4. Inventory & Materials Optimization  
-### 5. Operational Performance & OTP  
-### 6. Digital Analytics Validation & Anomaly Engine  
-### 7. Ledger‑Style Audit & Compliance Layer  
+1. **Cargo Intelligence & Pricing**  
+2. **Revenue & Network Performance**  
+3. **Engineering & MRO Supply Chain**  
+4. **Inventory & Materials Optimization**  
+5. **Operational Performance & OTP**  
+6. **Digital Analytics Validation & Anomaly Engine**  
+7. **Ledger‑Style Audit & Compliance Layer**  
+8. **CX Analytics (NPS & VoC)**  
+9. **Predictive Maintenance**  
+
+---
+
+# 🧭 Module–Industry Coverage Matrix
+
+| Module                                      | Aviation | Logistics | Healthcare | Pharma | Oil & Gas | Retail & E‑commerce | Manufacturing |
+|---------------------------------------------|:--------:|:---------:|:----------:|:------:|:---------:|:--------------------:|:-------------:|
+| Cargo Intelligence & Pricing                |    ✅    |     ✅    |            |        |           |                      |               |
+| Revenue & Network Performance               |    ✅    |     ✅    |            |        |           |          ✅          |               |
+| Engineering & MRO Supply Chain              |    ✅    |     ✅    |            |        |     ✅     |                      |      ✅        |
+| Inventory & Materials Optimization          |    ✅    |     ✅    |     ✅      |   ✅   |     ✅     |          ✅          |      ✅        |
+| Operational Performance & OTP               |    ✅    |     ✅    |     ✅      |        |     ✅     |          ✅          |      ✅        |
+| Digital Analytics Validation & Anomaly      |    ✅    |     ✅    |     ✅      |   ✅   |     ✅     |          ✅          |      ✅        |
+| Ledger‑Style Audit & Compliance Layer       |    ✅    |     ✅    |     ✅      |   ✅   |     ✅     |          ✅          |      ✅        |
+| CX Analytics (NPS & VoC)                    |    ✅    |     ✅    |     ✅      |        |           |          ✅          |               |
+| Predictive Maintenance                      |    ✅    |     ✅    |     ✅      |   ✅   |     ✅     |                      |      ✅        |
 
 ---
 
@@ -111,6 +148,7 @@ FastAPI endpoints:
                           │           Intelligence Engines            │
                           │ Forecasting | Optimization | Anomalies    │
                           │ Reliability | Funnel & Journey Analytics  │
+                          │ CX Analytics | Predictive Maintenance     │
                           └──────────────────────────────────────────┘
                                             │
                                             ▼
@@ -124,25 +162,32 @@ FastAPI endpoints:
                           ┌──────────────────────────────────────────┐
                           │           Dashboards & Apps              │
                           │ Power BI / Tableau | Ops Cockpits        │
-                          │ Digital Analytics Validation UI          │
+                          │ Digital & CX Analytics Views             │
                           └──────────────────────────────────────────┘
 
 📁 Project Structure
+text
 SkyLedger-AI/
-├─ app/                # FastAPI app and routers
-├─ access/             # Access .accdb database (LFS-tracked)
-├─ scripts/            # CSV→Access ODBC loader
-├─ data/               # Sample datasets
-├─ docs/               # Data dictionary & design notes
-├─ logs/               # Ledger-style audit logs
-├─ assets/             # Logos & visual assets
-├─ tests/              # API tests
-├─ .github/workflows/  # CI pipelines
+├─ app/                      # FastAPI app and routers
+├─ access/                   # Access .accdb database (LFS-tracked)
+├─ scripts/                  # CSV→Access ODBC loader
+├─ data/                     # Sample datasets
+├─ docs/                     # Data dictionary & design notes
+├─ logs/                     # Ledger-style audit logs
+├─ assets/                   # Logos & visual assets
+├─ excel/                    # Excel templates for logic verification
+├─ cx_analytics/             # CX Analytics (NPS & VoC) module
+├─ predictive_maintenance/   # Predictive maintenance analytics module
+├─ tests/                    # API tests
+├─ .github/workflows/        # CI pipelines
 ├─ README.md
 ├─ requirements.txt
 └─ LICENSE.txt
+CX Analytics Module – NPS and VoC analytics across aviation, retail, healthcare, logistics, and more.
 
-📚 Data Dictionary 
+Predictive Maintenance Module – Failure prediction and reliability analytics across multiple industries.
+
+📚 Data Dictionary
 Domain	Entity	Key Fields	Purpose
 Operations	Flights	flight_no, route, aircraft_type, seats, managed_capacity	Flight master data
 Forecasting	DemandSignals	dpd, bookings, intakes, cancellations, no_show_rate	Real‑time demand tracking
@@ -150,9 +195,8 @@ Commercial	Revenue	forecast_revenue, yield, rask, lf_target, class_mix	Financial
 Inventory	InventoryControl	class_code, action_type, dpd_band, min_yield, owner	Seat control actions
 Risk	OverbookingSettings	no_show_rate, safety_buffer, overbooking_level, risk_flag	Overbooking strategy
 Audit	AlertsLog	alert_type, root_cause, action_taken, owner, next_review	Ledger‑style transparency
-
 ⚡ Data Quick Start
-✅ 1. Local Setup
+✅ Local Setup
 bash
 python -m venv .venv
 .\.venv\Scripts\activate
@@ -161,7 +205,7 @@ pip install -r requirements.txt
 🗄️ CSV → Access Database Pipeline (ODBC)
 Database: access/SkyLedger.accdb
 
-Loader: scripts/import_to_access.py
+Loader Script: scripts/import_to_access.py
 
 Run:
 
@@ -173,10 +217,14 @@ Expected:
 
 🧪 Excel Templates (Logic Verification)
 ✅ OverbookingCalculator.xlsx
-Inputs → seats, bookings, no_show_rate, safety_buffer Outputs → overbooking_level, decrement_rate, risk_flag
+Inputs → seats, bookings, no_show_rate, safety_buffer
+
+Outputs → overbooking_level, decrement_rate, risk_flag
 
 ✅ CapacityScenarios.xlsx
-Inputs → route, aircraft_type, frequency Outputs → expected_LF_delta, expected_yield_delta
+Inputs → route, aircraft_type, frequency
+
+Outputs → expected_LF_delta, expected_yield_delta
 
 🌐 Tiny API Quickstart (FastAPI)
 Run:
@@ -203,5 +251,23 @@ Email	skyledgerai@gmail.com
 WhatsApp	+92 335 2177766
 LinkedIn	https://www.linkedin.com/in/syed-amjad-9b513570
 GitHub	https://github.com/syed-amjad65
-📜 License
+
+## © Copyright & Usage Notice
+
+SkyLedger‑AI is an original work created and owned by **Syed Muhammad Amjad**.
+
+You are permitted to:
+
+- Use the code for personal, academic, or commercial projects  
+- Modify or extend the code  
+- Integrate modules into your own systems  
+- Distribute derivative work  
+
+…as long as you follow the terms of the MIT License included in this repository.
+
+Unauthorized use of the **SkyLedger‑AI name, branding, logos, or proprietary datasets** is not permitted without written permission from the owner.
+
+For partnership, licensing, or commercial usage inquiries, please contact:  
+📧 **skyledgerai@gmail.com**
+## 📜 License
 MIT License — free to use, modify, and distribute with attribution.
