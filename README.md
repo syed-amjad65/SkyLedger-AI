@@ -25,6 +25,33 @@
 - [License](#license)
 
 ---
+## How to Navigate This Repository
+
+**Quick map to the most important folders and files**
+
+- **`README.md`** — Project overview and quick start.
+- **`cx_analytics/`** — Customer Experience analytics: datasets, scripts, and README.
+- **`predictive_maintenance/`** — Maintenance datasets, scripts, and README.
+- **`app/` or `tiny_api/`** — Minimal FastAPI app and endpoints (health, forecast, inventory, anomaly).
+- **`data/`** — Shared sample datasets used across modules.
+- **`scripts/`** — Utilities and CSV → Access loader.
+- **`excel/`** — Excel templates for logic verification.
+- **`docs/`** — Data dictionary and design notes.
+- **`assets/`** — Visual assets and banners.
+- **`LICENSE.txt`** — Project license and copyright.
+- **`requirements.txt`** — Python dependencies.
+
+**Suggested reading order**
+1. `README.md` for project context.  
+2. `cx_analytics/README.md` to see a complete working example.  
+3. `predictive_maintenance/README.md` for predictive analytics examples.  
+4. `app/` to inspect the API and endpoints.  
+5. `scripts/` and `data/` to reproduce results locally.
+
+**If you are evaluating the project for commercial use**
+- See `LICENSE.txt` for license terms.  
+- Contact the owner at **skyledgerai@gmail.com** for commercial inquiries.
+
 
 # Overview
 
