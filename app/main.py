@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.routers import health, predictive_maintenance, cx_analytics
+from app.routers import health, predictive_maintenance, cx_analytics, dashboard_metrics
 
 app = FastAPI(
     title="SkyLedger AI",
@@ -15,3 +15,4 @@ def root():
 app.include_router(health.router)
 app.include_router(predictive_maintenance.router)
 app.include_router(cx_analytics.router)
+app.include_router(dashboard_metrics.router)
