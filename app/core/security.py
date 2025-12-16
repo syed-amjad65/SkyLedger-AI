@@ -34,5 +34,19 @@ def require_role(required_role: str):
                 detail=f"Access denied: requires '{required_role}' role"
             )
         return current_user
-
     return role_checker
+
+
+def require_any_role(roles: list[str]):
+    def role_checker(current_user=Depends(get_current_user)):
+        if current_user["role"] not in roles:
+            raise HTTPException(
+                status_code=403,
+                detail=f"Access denied: requires one of {roles}"
+            )
+        return current_user
+    return role_checker
+
+
+def require_superadmin():
+    return require_role("superadmin")

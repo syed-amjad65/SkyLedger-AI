@@ -12,6 +12,11 @@ pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 # Dummy user database
 fake_users_db = {
+    "superadmin": {
+        "username": "superadmin",
+        "hashed_password": pwd_context.hash("superadmin123"),
+        "role": "superadmin",
+    },
     "admin": {
         "username": "admin",
         "hashed_password": pwd_context.hash("admin123"),
