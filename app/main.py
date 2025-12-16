@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from app.routers import health
 
 app = FastAPI(
     title="SkyLedger AI",
@@ -10,6 +11,5 @@ app = FastAPI(
 def root():
     return {"message": "SkyLedger AI API is running"}
 
-@app.get("/health")
-def health():
-    return {"status": "ok"}
+# Register routers
+app.include_router(health.router)
