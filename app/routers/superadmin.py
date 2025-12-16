@@ -14,6 +14,9 @@ from app.schemas.audit_logs import AuditLogEntry
 # Activity dashboard schema
 from app.schemas.activity_dashboard import ActivityDashboardResponse
 
+# System health schema
+from app.schemas.system_health import SystemHealthResponse
+
 # Services
 from app.services.user_management import (
     list_users,
@@ -27,7 +30,7 @@ from app.services.audit_logs import (
     get_logs_by_action,
 )
 from app.services.activity_dashboard import get_activity_summary
-
+from app.services.system_health import get_system_health_summary
 
 router = APIRouter(
     prefix="/superadmin",
@@ -51,6 +54,7 @@ def system_overview(current_user=Depends(require_superadmin())):
             "User Management",
             "Audit Logs",
             "Activity Dashboard",
+            "System Health",
         ],
         "message": "SuperAdmin access verified"
     }
@@ -120,3 +124,9 @@ def view_logs_by_action(action: str, current_user=Depends(require_superadmin()))
 @router.get("/activity-dashboard", response_model=ActivityDashboardResponse)
 def activity_dashboard(current_user=Depends(require_superadmin())):
     return get_activity_summary()
+
+
+# ✅ System Health — Operational Metrics
+@router.get("/system-health", response_model=SystemHealthResponse)
+def system_health(current_user=Depends(require_superadmin())):
+    return get_system_health_summary()
