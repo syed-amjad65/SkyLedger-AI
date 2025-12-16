@@ -1,25 +1,14 @@
-from fastapi import APIRouter
-
+from fastapi import APIRouter, Depends
 from app.schemas.ingestion import IngestionRequest, IngestionResponse
-from app.services.ingestion import validate_records, process_records
+from app.services.ingestion import ingest_data
+from app.core.security import require_any_role
 
 router = APIRouter(
-    prefix="/ingest",
+    prefix="/ingestion",
     tags=["Data Ingestion"],
 )
 
-
-@router.post("/json", response_model=IngestionResponse)
-def ingest_json(request: IngestionRequest):
-    issues = validate_records(request.records)
-    processed = process_records(request.records)
-
-    status = "success" if len(issues) == 0 else "partial_success"
-
-    return IngestionResponse(
-        source=request.source,
-        total_records=len(request.records),
-        processed_records=processed,
-        status=status,
-        issues=issues,
-    )
+# ✅ Only ADMIN or SUPERADMIN can ingest data
+@router.post("/", response_model=IngestionResponse)
+def ingest(request: IngestionRequest, current_user=Depends(require_any_role(["admin", "superadmin"]))):
+    return ingest_data(request)
