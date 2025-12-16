@@ -6,6 +6,7 @@ from app.routers import (
     dashboard_metrics,
     ingestion,
     asset_metadata,
+    auth,
 )
 
 app = FastAPI(
@@ -25,3 +26,4 @@ app.include_router(cx_analytics.router)
 app.include_router(dashboard_metrics.router)
 app.include_router(ingestion.router)
 app.include_router(asset_metadata.router)
+app.include_router(auth.router)
