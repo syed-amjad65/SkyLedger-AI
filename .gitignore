@@ -5,3 +5,5 @@ __pycache__/
 *.ldb
 *.laccdb
 ~$*
+.env
+

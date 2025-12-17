@@ -1,17 +1,14 @@
-from datetime import datetime, timedelta
-from typing import Optional
-
-from jose import jwt
+# app/services/auth.py
 from passlib.context import CryptContext
+from typing import Dict
 
-SECRET_KEY = "skyledger-secret-key"
-ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES = 60
+# Use a PBKDF2 scheme which does not have bcrypt's 72-byte limit.
+pwd_context = CryptContext(schemes=["pbkdf2_sha256"], deprecated="auto")
 
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
-
-# Dummy user database
-fake_users_db = {
+# Simple in-memory fake users DB for development/demo.
+# Store hashed passwords using the chosen pwd_context.
+# Keep initial demo passwords short and safe.
+fake_users_db: Dict[str, Dict] = {
     "superadmin": {
         "username": "superadmin",
         "hashed_password": pwd_context.hash("superadmin123"),
@@ -31,20 +28,27 @@ fake_users_db = {
 
 
 def verify_password(plain_password: str, hashed_password: str) -> bool:
+    """
+    Verify a plaintext password against a stored hash.
+    """
     return pwd_context.verify(plain_password, hashed_password)
 
 
-def authenticate_user(username: str, password: str) -> Optional[dict]:
-    user = fake_users_db.get(username)
+def get_user(username: str):
+    """
+    Return user dict from fake_users_db or None.
+    """
+    return fake_users_db.get(username)
+
+
+def authenticate_user(username: str, password: str):
+    """
+    Simple authentication helper for demo/testing.
+    Returns user dict on success, None on failure.
+    """
+    user = get_user(username)
     if not user:
         return None
     if not verify_password(password, user["hashed_password"]):
         return None
     return user
-
-
-def create_access_token(data: dict, expires_delta: Optional[timedelta] = None):
-    to_encode = data.copy()
-    expire = datetime.utcnow() + (expires_delta or timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES))
-    to_encode.update({"exp": expire})
-    return jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
