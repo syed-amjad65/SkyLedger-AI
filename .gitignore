@@ -6,4 +6,7 @@ __pycache__/
 *.laccdb
 ~$*
 .env
+skyledger.db
+skyledger_ai.egg-info/
+
 
