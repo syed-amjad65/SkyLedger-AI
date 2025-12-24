@@ -189,5 +189,4 @@ See LICENSE.txt for full terms..
 
 Use of the SkyLedger‑AI name, logo, or proprietary datasets for commercial products or public branding requires written permission from the owner. For partnership, licensing, or commercial usage inquiries, contact the commercial email above.
 
-License
-This project is licensed under the MIT License. See LICENSE.txt for full terms.
+
