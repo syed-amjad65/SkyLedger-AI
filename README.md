@@ -5,13 +5,13 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.10+-blue" alt="Python Badge"/>
   <img src="https://img.shields.io/badge/FastAPI-Framework-009688" alt="FastAPI Badge"/>
+  <img src="https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B" alt="Streamlit Badge"/>
   <img src="https://img.shields.io/badge/License-MIT-green" alt="MIT License"/>
   <img src="https://img.shields.io/github/stars/syed-amjad65/SkyLedger-AI?style=social" alt="GitHub Stars"/>
-  <img src="https://img.shields.io/github/forks/syed-amjad65/SkyLedger-AI?style=social" alt="GitHub Forks"/>
 </p>
 
 <h1 align="center">SkyLedger‑AI</h1>
-<h3 align="center">Intelligence That Powers Every Operation</h3>
+<h3 align="center">AI-Powered Operational Intelligence Across Industries</h3>
 
 ---
 
